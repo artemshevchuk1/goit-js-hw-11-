@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #3b54ad;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 1px rgb(0 0 0 / 14%),
+    0 2px 1px rgb(0 0 0 / 20%);
+}
+
+.search-form input {
+  padding: 8px;
+  width: 20%;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  font: inherit;
+}
+
+.search-form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  border-radius: 0 4px 4px 0;
+  border: none;
+  background-image: url(../images/search_button.svg);
+  background-color: #ededf5;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 70%;
+  cursor: pointer;
+}
+
+.btn-load-more.is-hidden {
+  display: none;
+}
+
+.btn-load-more {
+  display: block;
+  margin: 25px auto 0 auto;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3b54ad;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn-load-more:hover,
+.btn-to-top:hover {
+  background-color: #19359e;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  padding-top: 60px;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery__link {
+  margin-top: 20px;
+  margin-left: 20px;
+  min-width: 320px;
+  flex-basis: calc((100% - 80px) / 4);
+  border: 2px solid rgb(241, 238, 238);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.gallery__link:hover,
+.gallery__link:focus {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.gallery-item__img {
+  display: block;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.info {
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #110c08;
+}
+
+.info-item:not(:first-child) {
+  margin-left: 5px;
+}
